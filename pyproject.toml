@@ -1,0 +1,16 @@
+[project]
+name = "game-session-tracker"
+version = "0.1.0"
+description = "Game Session Tracker - это трекер для отслеживания игровых сессий (для начала для CS2).Идея проста, пользователь логинит свой Steam, а трекер записывает матчи, которые потом можно будет пересмотреть, считает и собирает статистику (winrate, avg time at play, streaks и многое другое) и сравнивает со своими друзьями, которые тоже подключили свой Steam к моему API."
+authors = [
+    {name = "Jaroslav Slipchuk",email = "s2010yd@icloud.com"}
+]
+requires-python = ">=3.14"
+dependencies = [
+    "fastapi[standard] (>=0.163.0,<0.164.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
