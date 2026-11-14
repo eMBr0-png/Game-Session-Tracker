@@ -7,7 +7,9 @@ authors = [
 ]
 requires-python = ">=3.14"
 dependencies = [
-    "fastapi[standard] (>=0.163.0,<0.164.0)"
+    "fastapi[standard] (>=0.163.0,<0.164.0)",
+    "pydantic-settings (>=2.16.3,<3.0.0)",
+    "sqlalchemy (>=2.1.8,<3.0.0)"
 ]
 
 
