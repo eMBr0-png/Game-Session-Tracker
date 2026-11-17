@@ -11,8 +11,10 @@ class Base(DeclarativeBase):
 class UserModel(Base):
     __tablename__ = "users"
 
-    id: Mapped[int] = mapped_column(primary_key=True)
-    nickname: Mapped[str] = mapped_column(String(50))
+    id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
+    username: Mapped[str] = mapped_column(String(50), nullable=False)
+    hashed_password: Mapped[str] = mapped_column(String(100), nullable=False)
+    email: Mapped[str] = mapped_column(String(255), unique=True, index=True, nullable=False)
     statistic: Mapped["StatisticModel"] = relationship(back_populates="owner", cascade="all, delete-orphan", uselist=False)
     games: Mapped[list["GameStatModel"]] = relationship(back_populates="player", cascade="all, delete-orphan")
 
